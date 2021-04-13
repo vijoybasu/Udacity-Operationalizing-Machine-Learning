@@ -69,9 +69,16 @@ AutoML Experiment is started and is now in running stage.
 
 
 AutoML Experiment completes and 'VotingEnsemble' is the best model obtained from the run.
-<center>
-    ![image](https://user-images.githubusercontent.com/81923226/114535767-050ce980-9c6e-11eb-9751-3328d3f639b2.png)
-</center>
+![image](https://user-images.githubusercontent.com/81923226/114535767-050ce980-9c6e-11eb-9751-3328d3f639b2.png)
+
+
+We also have the option to view the explaination as we had checked the explain best model parameter during AutoML run initiation time.
+![image](https://user-images.githubusercontent.com/81923226/114537422-ce37d300-9c6f-11eb-8620-27cb88af568e.png)
+
+Model achieves 92% accuracy via VotingEnsemble (AUTOML) with other metrics displayed.
+![image](https://user-images.githubusercontent.com/81923226/114537515-eb6ca180-9c6f-11eb-8a44-87abefbbf89f.png)
+
+
 
 
 
