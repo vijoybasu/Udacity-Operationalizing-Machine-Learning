@@ -35,8 +35,9 @@ Compute Cluster creation process initiated
 
 
 Standard_DS12_v2 chosen as the VM for the cluster
-![image](https://user-images.githubusercontent.com/81923226/114527851-0f2aea00-9c66-11eb-8a32-04191c606d8d.png)
-
+<center>
+    <img src="https://user-images.githubusercontent.com/81923226/114527851-0f2aea00-9c66-11eb-8a32-04191c606d8d.png">
+</center>
 
 Cluster is named with minimum number of nodes set as = 1
 ![image](https://user-images.githubusercontent.com/81923226/114528111-51ecc200-9c66-11eb-84a1-7e12fbe0328d.png)
