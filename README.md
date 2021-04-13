@@ -51,7 +51,7 @@ Experiment has now been named as per choice and target column chosen as = 'y'
 ![image](https://user-images.githubusercontent.com/81923226/114528331-8bbdc880-9c66-11eb-8e7a-6c611d763e2e.png)
 
 
-'Classification' is the chosen AutoML Task.
+'Classification' is the chosen AutoML Task (without checking the enable Deep Learning box).
 <center>
     <img src="https://user-images.githubusercontent.com/81923226/114529524-a8a6cb80-9c67-11eb-9d6e-8b59540c9c4a.png"
 </center>
@@ -59,7 +59,7 @@ Experiment has now been named as per choice and target column chosen as = 'y'
 'Accuracy' is chosen as the Primary Metric with 'Explain Best Model' checked for better explainability factors.
 ![image](https://user-images.githubusercontent.com/81923226/114529608-c3794000-9c67-11eb-85d0-7af9b1942cc4.png)
 
-'Max Concurrent Iterations' is kept as = 5.
+'Exit criterion' is set to =1hr and 'Max Concurrent Iterations' is kept as = 5.
 <center>
     <img src="https://user-images.githubusercontent.com/81923226/114529700-dbe95a80-9c67-11eb-88c2-a45aa99f063c.png"
 </center>
@@ -102,12 +102,12 @@ Successfully Deployed! Deployment State changed to 'Healthy'
 ![image](https://user-images.githubusercontent.com/81923226/114537976-777ec900-9c70-11eb-93ab-54c595410307.png)
 
 
-REST Endpoint of deployment displayed.
+REST Endpoint of deployment displayed. We need to enable logging. Application Inisghts is 'false' now
 
 ![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
 
 
-We now use GitBash and run the `logs.py` script to initiate the model logging process.
+We now use GitBash and run the `logs.py` script to initiate the model logging process and this changes the Application Insights field to 'true'.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
 ![image](https://user-images.githubusercontent.com/81923226/114538146-abf28500-9c70-11eb-9c4a-f5a23bd99a4c.png)
