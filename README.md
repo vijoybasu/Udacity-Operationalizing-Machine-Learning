@@ -64,6 +64,16 @@ Experiment has now been named as per choice and target column chosen as = 'y'
     <img src="https://user-images.githubusercontent.com/81923226/114529700-dbe95a80-9c67-11eb-88c2-a45aa99f063c.png"
 </center>
 
+AutoML Experiment is started and is now in running stage.
+![image](https://user-images.githubusercontent.com/81923226/114535658-e870b180-9c6d-11eb-92a6-8ae4edcfa091.png)
+
+
+AutoML Experiment completes and 'VotingEnsemble' is the best model obtained from the run.
+<center>
+    ![image](https://user-images.githubusercontent.com/81923226/114535767-050ce980-9c6e-11eb-9751-3328d3f639b2.png)
+</center>
+
+
 
 
 
