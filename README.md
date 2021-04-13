@@ -110,7 +110,7 @@ REST Endpoint of deployment displayed. We need to enable logging. Application In
 We now use GitBash and run the `logs.py` script to initiate the model logging process and this changes the Application Insights field to 'true'.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
-![image](https://user-images.githubusercontent.com/81923226/114538146-abf28500-9c70-11eb-9c4a-f5a23bd99a4c.png)
+![image](https://user-images.githubusercontent.com/81923226/114584063-e45d8780-9c9f-11eb-8d20-4ffa916d1c10.png)
 
 We download the `swagger.json` file to the parent directory folder from the deployment endpoint to publish our pipeline.
 ![image](https://user-images.githubusercontent.com/81923226/114538167-b14fcf80-9c70-11eb-8355-cfe01c432b59.png)
@@ -124,7 +124,7 @@ We open two other GitBash CLI to execute the `swagger.sh` and `serve.py` files i
 ![image](https://user-images.githubusercontent.com/81923226/114538386-f83dc500-9c70-11eb-8e02-9d0047d0d083.png)
 ![image](https://user-images.githubusercontent.com/81923226/114538417-025fc380-9c71-11eb-84e4-8eef928bcd78.png)
 
-We change the port number in `swagger.sh` as it was giving an error to us
+We change the port number to 9000 in `swagger.sh` as it was giving an error to us
 
 ![image](https://user-images.githubusercontent.com/81923226/114538474-0ee41c00-9c71-11eb-957c-987bea4a81a1.png)
 
