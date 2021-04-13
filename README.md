@@ -22,20 +22,34 @@ In this project, we use the "Bank Marketing Dataset" to train a ML model using A
 ## Complete Workflow Explaination & Screenshots
 
 
-Bank Marketing dataset is uploaded on Azure MLS and consequently registered.
+Bank Marketing dataset is uploaded on Azure MLS and consequently registered
 ![image](https://user-images.githubusercontent.com/81923226/114527550-bf4c2300-9c65-11eb-880d-73dfeb1fb630.png)
-Compute Cluster creation process initiated.
+
+
+Compute Cluster creation process initiated
 ![image](https://user-images.githubusercontent.com/81923226/114527778-fde1dd80-9c65-11eb-982d-6d569e747c33.png)
-Standard_DS12_v2 chosen as the VM for the cluster.
+
+
+Standard_DS12_v2 chosen as the VM for the cluster
 ![image](https://user-images.githubusercontent.com/81923226/114527851-0f2aea00-9c66-11eb-8a32-04191c606d8d.png)
+
+
 Cluster is named with minimum number of nodes set as = 1
 ![image](https://user-images.githubusercontent.com/81923226/114528111-51ecc200-9c66-11eb-84a1-7e12fbe0328d.png)
-Post successful creation of compute cluster, we head over to experiment and start an AutoML run.
+
+
+Post successful creation of compute cluster, we head over to experiment and start an AutoML run
 ![image](https://user-images.githubusercontent.com/81923226/114528196-6af57300-9c66-11eb-950f-0a6fdaa000c0.png)
-Bank Marketing dataset is chosen for the desired AutoML run.
+
+
+Bank Marketing dataset is chosen for the desired AutoML run
 ![image](https://user-images.githubusercontent.com/81923226/114528245-75b00800-9c66-11eb-9dbf-a2c6ab202453.png)
+
+
 Experiment has now been named as per choice and target column chosen as = 'y'
 ![image](https://user-images.githubusercontent.com/81923226/114528331-8bbdc880-9c66-11eb-8e7a-6c611d763e2e.png)
+
+
 
 
 
