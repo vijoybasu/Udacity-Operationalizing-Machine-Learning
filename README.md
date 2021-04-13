@@ -52,14 +52,17 @@ Experiment has now been named as per choice and target column chosen as = 'y'
 
 
 'Classification' is the chosen AutoML Task.
-![image](https://user-images.githubusercontent.com/81923226/114529524-a8a6cb80-9c67-11eb-9d6e-8b59540c9c4a.png)
-
+<center>
+    <img src="https://user-images.githubusercontent.com/81923226/114529524-a8a6cb80-9c67-11eb-9d6e-8b59540c9c4a.png"
+</center>
 
 'Accuracy' is chosen as the Primary Metric with 'Explain Best Model' checked for better explainability factors.
 ![image](https://user-images.githubusercontent.com/81923226/114529608-c3794000-9c67-11eb-85d0-7af9b1942cc4.png)
 
 'Max Concurrent Iterations' is kept as = 5.
-![image](https://user-images.githubusercontent.com/81923226/114529700-dbe95a80-9c67-11eb-88c2-a45aa99f063c.png)
+<center>
+    <img src="https://user-images.githubusercontent.com/81923226/114529700-dbe95a80-9c67-11eb-88c2-a45aa99f063c.png"
+</center>
 
 
 
