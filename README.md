@@ -117,8 +117,8 @@ We download the `swagger.json` file to the parent directory folder from the depl
 
 
 We open two other GitBash CLI to execute the `swagger.sh` and `serve.py` files individually.
-> bash swagger.sh
-> python serve.py
+- bash swagger.sh
+- python serve.py
 
 ![image](https://user-images.githubusercontent.com/81923226/114538360-efe58a00-9c70-11eb-8865-4c5da6e5f885.png)
 ![image](https://user-images.githubusercontent.com/81923226/114538386-f83dc500-9c70-11eb-8e02-9d0047d0d083.png)
@@ -133,97 +133,136 @@ Swagger.sh file ran again to publish the pipeline.
 ![image](https://user-images.githubusercontent.com/81923226/114538514-199eb100-9c71-11eb-9ec3-1585723518fb.png)
 
 
-Serve.py file executed on new port no - 9000
+We run the Serve.py file on new port no - 9000 to check the swagger output.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538565-26230980-9c71-11eb-8d97-c2ed86a864e6.png)
 
 
+Swagger's page is successfully running on the localhost
 
+![image](https://user-images.githubusercontent.com/81923226/114538836-6d10ff00-9c71-11eb-986f-c9895bbd78a6.png)
 
 
+We now check for our deployed model on the swagger end.
 
+![image](https://user-images.githubusercontent.com/81923226/114538878-7c904800-9c71-11eb-8b60-c33d037a0d9e.png)
 
+We run the web service model and try to obtain the predicted output.
 
+![image](https://user-images.githubusercontent.com/81923226/114538903-85811980-9c71-11eb-8e8b-73677d82aff1.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114538944-929e0880-9c71-11eb-9a1f-a0b7539fdef8.png)
 
 
+Once we have confirmed that the model is successfully predicting and the pipeline is successful, we try to consume the model using an endpoint.
+We now will edit the `endpoint.py` file and put our obtained REST Endpoint from the deployment into the `scoring uri` parameter here.
 
+![image](https://user-images.githubusercontent.com/81923226/114539102-c0834d00-9c71-11eb-9d70-8ccd49948ba4.png)
 
+We execute the `endpoint.py` file and try to check the consumed model's final output.
+Output is obtained in the similar format as desired, hence validating our approach.
 
+![image](https://user-images.githubusercontent.com/81923226/114539207-e27ccf80-9c71-11eb-95f9-06746542fb45.png)
 
 
+All the project files in the parent directory are displayed here for further confirmation.
 
+![image](https://user-images.githubusercontent.com/81923226/114539274-f4f70900-9c71-11eb-99dc-418f8c4046e0.png)
 
 
+We now go back to the Azure MLS, and upload the jupyter notebook and try to execute the notebook step-by-step to confirm our approach using code.
 
+![image](https://user-images.githubusercontent.com/81923226/114539354-0cce8d00-9c72-11eb-844c-473c43ecca28.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539366-10621400-9c72-11eb-8587-007d0ce2fcaf.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539376-13f59b00-9c72-11eb-84d5-82c4e20eb22b.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539389-17892200-9c72-11eb-8664-d257841698fd.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539410-1b1ca900-9c72-11eb-8340-c165077d0feb.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539424-1eb03000-9c72-11eb-8f40-f5d7684e0fa8.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539436-21ab2080-9c72-11eb-94ee-6c8f514ebd2e.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539466-27a10180-9c72-11eb-8d52-403287172522.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539490-2b348880-9c72-11eb-8108-5ba6bde3c2cf.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539508-2ff93c80-9c72-11eb-9879-4485d8cdfe0a.png)
 
+RUNNING STATUS SUCCESSFULLY DISPLAYED USING THE WIDGET!
 
+![image](https://user-images.githubusercontent.com/81923226/114539543-3982a480-9c72-11eb-956a-85ca8e89cfbb.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539561-3daec200-9c72-11eb-8da4-1be5f01d1d8b.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539574-42737600-9c72-11eb-86a5-6432e23274cf.png)
 
+FINAL OUTPUT OF COMPLETED RUN!
 
+![image](https://user-images.githubusercontent.com/81923226/114539601-469f9380-9c72-11eb-8046-9d6a790c10d7.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539642-50c19200-9c72-11eb-9bb7-7a433abdb9df.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539657-54551900-9c72-11eb-9f16-d89f5369477f.png)
 
+Final Metrics of our completed AutoML Run.
 
+![image](https://user-images.githubusercontent.com/81923226/114539693-5b7c2700-9c72-11eb-8c36-01f2192aaaa0.png)
+![image](https://user-images.githubusercontent.com/81923226/114539702-5f0fae00-9c72-11eb-9dc7-213ef5c7e0c9.png)
 
 
+The Best model is being retrieved.
 
+![image](https://user-images.githubusercontent.com/81923226/114539729-6636bc00-9c72-11eb-9d88-5621b8012ab9.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539737-6931ac80-9c72-11eb-9d0b-8a352263a68e.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539753-6df66080-9c72-11eb-91bb-4418888b2a03.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539780-72bb1480-9c72-11eb-8525-dbf22307e775.png)
 
+We now try and publish the REST Endpoint.
 
+![image](https://user-images.githubusercontent.com/81923226/114539812-79e22280-9c72-11eb-836d-ec8931fc952a.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539824-7d75a980-9c72-11eb-89ff-d9748102f28b.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539835-81093080-9c72-11eb-9c0c-3f3eb01d2fc8.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539850-849cb780-9c72-11eb-9f30-506fcf283f42.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539870-89fa0200-9c72-11eb-8351-85c682241dc8.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114539883-8f574c80-9c72-11eb-842d-3afcf95297ee.png)
 
+Pipeline endpoint is successfully displayed as 'pipeline-rest-endpoint'
 
+![image](https://user-images.githubusercontent.com/81923226/114540018-b281fc00-9c72-11eb-8b85-d9c3d23e9cf4.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114540033-b746b000-9c72-11eb-9e6e-e6a479ab05c7.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114540074-bd3c9100-9c72-11eb-9280-4a7259a5d50d.png)
 
+PIPELINE RUN OVERVIEW
 
+![image](https://user-images.githubusercontent.com/81923226/114540094-c3327200-9c72-11eb-8859-9bab6538670e.png)
 
+BANK MARKETING DATASET
 
+![image](https://user-images.githubusercontent.com/81923226/114540123-cb8aad00-9c72-11eb-9c84-0f302fe5bcf7.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114540142-d1808e00-9c72-11eb-9c19-49da402a84f3.png)
 
+PUBLISHED PIPELINE OVERVIEW
 
+![image](https://user-images.githubusercontent.com/81923226/114540181-d9d8c900-9c72-11eb-829c-a5c18d1f65ae.png)
 
+![image](https://user-images.githubusercontent.com/81923226/114540192-dd6c5000-9c72-11eb-81f6-72f3ac634a0f.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/81923226/114540210-e2310400-9c72-11eb-83d5-bdaac527b33a.png)
 
 
 ## Potential Improvements
