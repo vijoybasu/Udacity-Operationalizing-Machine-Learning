@@ -29,9 +29,9 @@ Bank Marketing dataset is uploaded on Azure MLS and consequently registered
 
 
 Compute Cluster creation process initiated
-![image](https://user-images.githubusercontent.com/81923226/114527778-fde1dd80-9c65-11eb-982d-6d569e747c33.png)
-
-
+<center>
+    <img src="https://user-images.githubusercontent.com/81923226/114527778-fde1dd80-9c65-11eb-982d-6d569e747c33.png">
+</center>
 
 
 Standard_DS12_v2 chosen as the VM for the cluster
