@@ -19,7 +19,7 @@ In this project, we use the "Bank Marketing Dataset" to train a ML model using A
 6. Using python SDK create a pipeline selecting the best AutoML model and publish it.
 
 
-## Complete Workflow Explaination & Screenshots
+## Complete Workflow Step-by-Step Explaination & Screenshots
 
 
 Bank Marketing dataset is uploaded on Azure MLS and is consequently registered.
@@ -77,6 +77,67 @@ We also have the option to view the explaination as we had checked the explain b
 
 Model achieves 92% accuracy via VotingEnsemble (AUTOML) with other metrics displayed.
 ![image](https://user-images.githubusercontent.com/81923226/114537515-eb6ca180-9c6f-11eb-8a44-87abefbbf89f.png)
+
+RESULT GRAPHS OF AUTOML RUN DISPLAYED BELOW:
+
+![image](https://user-images.githubusercontent.com/81923226/114537728-2c64b600-9c70-11eb-87f1-d151c3735e14.png)
+![image](https://user-images.githubusercontent.com/81923226/114537750-31296a00-9c70-11eb-9756-d11db7701a9f.png)
+![image](https://user-images.githubusercontent.com/81923226/114537766-34bcf100-9c70-11eb-88f3-55b8dfc8345c.png)
+![image](https://user-images.githubusercontent.com/81923226/114537791-3c7c9580-9c70-11eb-900d-8da03f10d504.png)
+![image](https://user-images.githubusercontent.com/81923226/114537812-443c3a00-9c70-11eb-95d1-cc304c0fb9e2.png)
+
+
+Now, we proceed for Model Deployment. We click on "Deploy" button to initiate deployment of the best run. We name the deployment too.
+
+![image](https://user-images.githubusercontent.com/81923226/114537883-5d44eb00-9c70-11eb-96dd-d23ff95a12d2.png)
+
+
+Deployment is now in 'Transitioning' State.
+
+![image](https://user-images.githubusercontent.com/81923226/114537919-6a61da00-9c70-11eb-9269-9c27302fd9bb.png)
+
+
+Successfully Deployed! Deployment State changed to 'Healthy'
+
+![image](https://user-images.githubusercontent.com/81923226/114537976-777ec900-9c70-11eb-93ab-54c595410307.png)
+
+
+REST Endpoint of deployment displayed.
+
+![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
+
+
+We now use GitBash and run the `logs.py` script to initiate the model logging process.
+
+![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
+![image](https://user-images.githubusercontent.com/81923226/114538146-abf28500-9c70-11eb-9c4a-f5a23bd99a4c.png)
+
+We download the `swagger.json` file to the parent directory folder from the deployment endpoint to publish our pipeline.
+![image](https://user-images.githubusercontent.com/81923226/114538167-b14fcf80-9c70-11eb-8355-cfe01c432b59.png)
+
+
+We open two other GitBash CLI to execute the `swagger.sh` and `serve.py` files individually.
+> bash swagger.sh
+> python serve.py
+
+![image](https://user-images.githubusercontent.com/81923226/114538360-efe58a00-9c70-11eb-8865-4c5da6e5f885.png)
+![image](https://user-images.githubusercontent.com/81923226/114538386-f83dc500-9c70-11eb-8e02-9d0047d0d083.png)
+![image](https://user-images.githubusercontent.com/81923226/114538417-025fc380-9c71-11eb-84e4-8eef928bcd78.png)
+
+We change the port number in `swagger.sh` as it was giving an error to us
+
+![image](https://user-images.githubusercontent.com/81923226/114538474-0ee41c00-9c71-11eb-957c-987bea4a81a1.png)
+
+Swagger.sh file ran again to publish the pipeline.
+
+![image](https://user-images.githubusercontent.com/81923226/114538514-199eb100-9c71-11eb-9ec3-1585723518fb.png)
+
+
+Serve.py file executed on new port no - 9000
+
+![image](https://user-images.githubusercontent.com/81923226/114538565-26230980-9c71-11eb-8d97-c2ed86a864e6.png)
+
+
 
 
 
