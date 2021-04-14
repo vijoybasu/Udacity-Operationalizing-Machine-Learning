@@ -13,7 +13,7 @@ In this project, we use the "Bank Marketing Dataset" to train a ML model using A
 
 ## How can we improve the project further?
 
-1. Using Deep Learning in AutoML to accelerate the model training process and improve the accuracy, however this is subjective and may only work on larger datasets with lowly-sparsed features present.
+1. Using Deep Learning in AutoML to accelerate the model training process and improve the accuracy, however this is subjective and may only work on larger datasets with lowly-sparsed features present. (https://www.ijcai.org/proceedings/2019/0602.pdf)
 2. Apply model interpretability of AutoML on more complex and larger datasets, to gain speed and valuable insights in feature engineering, which can in turn be used to refine complex model accuracy.
 3. Apply the same concept learned here to create and publish other types of pipelines for:
      - Data Preparation
@@ -22,13 +22,36 @@ In this project, we use the "Bank Marketing Dataset" to train a ML model using A
      - Combined tasks
 
 ## Key Steps:
-1. Bank Marketing Dataset is registered on Azure MLS
-2. Specify the dataset and configuration details such as machine learning task, here in our case its a classification task, exit criteria, etc. for selecting the best model that AutoML will produce.
-3. Based on the metric selected in AutoML, select the best model and deploy it using azure container instance(ACI)
-4. Enable logging and application insight service for keeping track of deployed model performance and number of request handled/failed.
-5. After deployment and enabling the logs and application insights use the REST endpoint to interact with the deployed model with sample data and check its prediction results.
-6. Using python SDK create a pipeline selecting the best AutoML model and publish it.
+1. The Bank Marketing Dataset is registered on Azure MLS.
+2. Specify the dataset target variable and configuration details such as the machine learning task, model explainability and concurrent runs. Here in our case, we proceed with a classification task, an exit criteria for selecting the best model that AutoML will produce.
+3. Based on the primary metric selected in AutoML, we go ahead and select the best model and deploy it using azure container instance(ACI)
+4. We also make sure to enable logging and consequently application insights for keeping track of the deployed model performance and number of HTTP API Response and Request.
+5. After deployment and enabling the logs and application insights, we use the REST endpoint to consume the deployed model with sample data and check its prediction results with a JSON Payload.
+6. Using the python SDK create a pipeline selecting the best AutoML model and publish it.
+7. The published pipeline is viewed in the AML Studio for confirmation.
 
+#### Authentication
+This step used the `az cli` interface to log in to the `AML Studio`, then create a Service Principal (SP) to access the project workspace. As Udacity provisioned AML lab environment does not have sufficient privilege to create the SP, this step was not performed.
+
+#### Auto ML Model
+This step used AML AutoML to train a collection of classification models on this Bank Marketing dataset and present the trained models in descending order of AUC weighted accuracy.
+
+#### Deploy the best model
+In this step, the top performing model, i.e. the one with the best AUC weighted accuracy was selected for deployment, and an endpoint to interact with the model was generated.
+
+#### Enable Logging
+This step used `az cli` interface to enable Application Insights and retrieve logs of the operational health of the deployed model endpoint.
+
+#### Consume Model Endpoints
+In this step, a provided script was run in the `az cli` interface to make a request to the deployed model endpoint and display the response received. The payload data used for testing the endpoint was also saved to a json file named `data.json` for use in conducting a benchmarking test on the endpoint.
+
+#### Create and publish a pipeline
+
+This involved creating and publishig an endpoint for the AutoML training pipeline, allowing the training process to be automated.
+
+#### Documentation
+
+In this final step, a screencast was created to show the entire process of the working ML application, along with a README.md file to describe the project and document the main steps.
 
 ## SCREENCAST YOUTUBE VIDEO LINK 
 https://www.youtube.com/watch?v=_D0UccIcd6c
@@ -121,23 +144,23 @@ Successfully Deployed! Deployment State changed to 'Healthy'
 ![image](https://user-images.githubusercontent.com/81923226/114537976-777ec900-9c70-11eb-93ab-54c595410307.png)
 
 
-REST Endpoint of deployment displayed. We need to enable logging. Application Inisghts is 'false' now
+We now choose the best model and enable 'Authentication' while deploying the model using Azure Container Instances (ACI)
 
 ![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
 
 
 ### Application Insights set to 'True' and `logs.py` is executed to enable logging
 
-We now use GitBash and run the `logs.py` script to initiate the model logging process and this changes the Application Insights field to 'true'.
+The executed code in logs.py enables 'Application Insights'. This parameter was disabled before executing `logs.py`.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
 ![image](https://user-images.githubusercontent.com/81923226/114584063-e45d8780-9c9f-11eb-8d20-4ffa916d1c10.png)
 
-We download the `swagger.json` file to the parent directory folder from the deployment endpoint to publish our pipeline.
+We now download the `swagger.json` file to the parent directory folder from the deployment endpoint in the `AML Studio` to publish our pipeline.
 ![image](https://user-images.githubusercontent.com/81923226/114538167-b14fcf80-9c70-11eb-8355-cfe01c432b59.png)
 
 
-We open two other GitBash CLI to execute the `swagger.sh` and `serve.py` files individually.
+We open two other GitBash `az cli` to execute the `swagger.sh` and `serve.py` files individually.
 - bash swagger.sh
 - python serve.py
 
@@ -164,7 +187,7 @@ We run the Serve.py file on new port no - 9000 to check the swagger output.
 ![image](https://user-images.githubusercontent.com/81923226/114538836-6d10ff00-9c71-11eb-986f-c9895bbd78a6.png)
 
 ### Swagger runs on localhost showing the HTTP API Methods and responses for the model
-We now check for our deployed model on the swagger end.
+We now check for our deployed model on the swagger hosted page.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538878-7c904800-9c71-11eb-8b60-c33d037a0d9e.png)
 
@@ -187,7 +210,7 @@ Output is obtained in the similar format as desired, hence validating our approa
 ![image](https://user-images.githubusercontent.com/81923226/114539207-e27ccf80-9c71-11eb-95f9-06746542fb45.png)
 
 
-All the project files in the parent directory are displayed here for further confirmation.
+All the project files in the parent directory are displayed here for further review and confirmation. We use the `ls -lrtF` command to check this.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539274-f4f70900-9c71-11eb-99dc-418f8c4046e0.png)
 
