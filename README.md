@@ -288,13 +288,3 @@ PIPELINE RUN OVERVIEW
 ![image](https://user-images.githubusercontent.com/81923226/114540192-dd6c5000-9c72-11eb-81f6-72f3ac634a0f.png)
 
 ![image](https://user-images.githubusercontent.com/81923226/114540210-e2310400-9c72-11eb-83d5-bdaac527b33a.png)
-
-## Potential Improvements
-
-1. Using Deep Learning in AutoML to accelerate the model training process and improve the accuracy, however this is subjective and may only work on larger datasets with lowly-sparsed features present.
-2. Apply model interpretability of AutoML on more complex and larger datasets, to gain speed and valuable insights in feature engineering, which can in turn be used to refine complex model accuracy.
-3. Apply the same concept learned here to create and publish other types of pipelines for:
-     - Data Preparation
-     - Validation
-     - Deployment
-     - Combined tasks
