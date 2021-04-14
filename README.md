@@ -37,7 +37,6 @@ https://www.youtube.com/watch?v=_D0UccIcd6c
 
 ## Complete Workflow Step-by-Step Explaination & Screenshots
 
-
 ### Bank Marketing dataset is uploaded on Azure MLS and is consequently registered.
 ![image](https://user-images.githubusercontent.com/81923226/114527550-bf4c2300-9c65-11eb-880d-73dfeb1fb630.png)
 
@@ -57,6 +56,8 @@ Cluster is named with minimum number of nodes set as = 1
 
 Post successful creation of compute cluster, we head over to experiment and start an AutoML run
 ![image](https://user-images.githubusercontent.com/81923226/114528196-6af57300-9c66-11eb-950f-0a6fdaa000c0.png)
+
+## Create a new AutoML Run
 
 ### Initializing AutoML Run
 
@@ -103,12 +104,12 @@ RESULT GRAPHS OF AUTOML RUN DISPLAYED BELOW:
 ![image](https://user-images.githubusercontent.com/81923226/114537791-3c7c9580-9c70-11eb-900d-8da03f10d504.png)
 ![image](https://user-images.githubusercontent.com/81923226/114537812-443c3a00-9c70-11eb-95d1-cc304c0fb9e2.png)
 
+## Deploy a model and consume a model endpoint via an HTTP API
 ### Deploying Model Obtained via AutoML
 
 Now, we proceed for Model Deployment. We click on "Deploy" button to initiate deployment of the best run. We name the deployment too.
 
 ![image](https://user-images.githubusercontent.com/81923226/114537883-5d44eb00-9c70-11eb-96dd-d23ff95a12d2.png)
-
 
 Deployment is now in 'Transitioning' State.
 
@@ -123,6 +124,7 @@ Successfully Deployed! Deployment State changed to 'Healthy'
 REST Endpoint of deployment displayed. We need to enable logging. Application Inisghts is 'false' now
 
 ![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
+
 
 ### Application Insights set to 'True' and `logs.py` is executed to enable logging
 
