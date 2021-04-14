@@ -124,7 +124,8 @@ REST Endpoint of deployment displayed. We need to enable logging. Application In
 
 ![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
 
-### Application Insights set to 'True'
+### Application Insights set to 'True' and `logs.py` is executed to enable logging
+
 We now use GitBash and run the `logs.py` script to initiate the model logging process and this changes the Application Insights field to 'true'.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
@@ -156,11 +157,11 @@ We run the Serve.py file on new port no - 9000 to check the swagger output.
 ![image](https://user-images.githubusercontent.com/81923226/114538565-26230980-9c71-11eb-8d97-c2ed86a864e6.png)
 
 
-Swagger's page is successfully running on the localhost
+### Swagger runs on localhost
 
 ![image](https://user-images.githubusercontent.com/81923226/114538836-6d10ff00-9c71-11eb-986f-c9895bbd78a6.png)
 
-
+### Swagger runs on localhost showing the HTTP API Methods and responses for the model
 We now check for our deployed model on the swagger end.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538878-7c904800-9c71-11eb-8b60-c33d037a0d9e.png)
@@ -177,6 +178,7 @@ We now will edit the `endpoint.py` file and put our obtained REST Endpoint from 
 
 ![image](https://user-images.githubusercontent.com/81923226/114539102-c0834d00-9c71-11eb-9d70-8ccd49948ba4.png)
 
+### Endpoint.py script runs against the API producing JSON output from the model
 We execute the `endpoint.py` file and try to check the consumed model's final output.
 Output is obtained in the similar format as desired, hence validating our approach.
 
@@ -187,7 +189,7 @@ All the project files in the parent directory are displayed here for further con
 
 ![image](https://user-images.githubusercontent.com/81923226/114539274-f4f70900-9c71-11eb-99dc-418f8c4046e0.png)
 
-
+## Configure a pipeline with the Python SDK
 We now go back to the Azure MLS, and upload the jupyter notebook and try to execute the notebook step-by-step to confirm our approach using code.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539354-0cce8d00-9c72-11eb-844c-473c43ecca28.png)
@@ -210,7 +212,7 @@ We now go back to the Azure MLS, and upload the jupyter notebook and try to exec
 
 ![image](https://user-images.githubusercontent.com/81923226/114539508-2ff93c80-9c72-11eb-9879-4485d8cdfe0a.png)
 
-RUNNING STATUS SUCCESSFULLY DISPLAYED USING THE WIDGET!
+### RunDetails Widget successfully completes execution
 
 ![image](https://user-images.githubusercontent.com/81923226/114539543-3982a480-9c72-11eb-956a-85ca8e89cfbb.png)
 
@@ -226,13 +228,13 @@ FINAL OUTPUT OF COMPLETED RUN!
 
 ![image](https://user-images.githubusercontent.com/81923226/114539657-54551900-9c72-11eb-9f16-d89f5369477f.png)
 
-Final Metrics of our completed AutoML Run.
+### Final Metrics of our completed AutoML Run.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539693-5b7c2700-9c72-11eb-8c36-01f2192aaaa0.png)
 ![image](https://user-images.githubusercontent.com/81923226/114539702-5f0fae00-9c72-11eb-9dc7-213ef5c7e0c9.png)
 
 
-The Best model is being retrieved.
+### The Best model is being retrieved.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539729-6636bc00-9c72-11eb-9d88-5621b8012ab9.png)
 
@@ -242,6 +244,8 @@ The Best model is being retrieved.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539780-72bb1480-9c72-11eb-8525-dbf22307e775.png)
 
+
+## Publishing a ML Pipeline
 We now try and publish the REST Endpoint.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539812-79e22280-9c72-11eb-836d-ec8931fc952a.png)
@@ -256,6 +260,7 @@ We now try and publish the REST Endpoint.
 
 ![image](https://user-images.githubusercontent.com/81923226/114539883-8f574c80-9c72-11eb-842d-3afcf95297ee.png)
 
+## Use a REST endpoint to interact with a Pipeline.
 Pipeline endpoint is successfully displayed as 'pipeline-rest-endpoint'
 
 ![image](https://user-images.githubusercontent.com/81923226/114540018-b281fc00-9c72-11eb-8b85-d9c3d23e9cf4.png)
@@ -268,13 +273,13 @@ PIPELINE RUN OVERVIEW
 
 ![image](https://user-images.githubusercontent.com/81923226/114540094-c3327200-9c72-11eb-8859-9bab6538670e.png)
 
-BANK MARKETING DATASET
+### Bank Marketing Dataset with AutoML Module
 
 ![image](https://user-images.githubusercontent.com/81923226/114540123-cb8aad00-9c72-11eb-9c84-0f302fe5bcf7.png)
 
 ![image](https://user-images.githubusercontent.com/81923226/114540142-d1808e00-9c72-11eb-9c19-49da402a84f3.png)
 
-PUBLISHED PIPELINE OVERVIEW
+### The "Published Pipeline Overview" showing a REST Endpoint and a status of ACTIVE
 
 ![image](https://user-images.githubusercontent.com/81923226/114540181-d9d8c900-9c72-11eb-829c-a5c18d1f65ae.png)
 
