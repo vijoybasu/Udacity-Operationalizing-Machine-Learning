@@ -4,13 +4,24 @@
 
 ### Udacity Azure Machine Learning Engineer Scholarship - Operationalizing Machine Learning in Azure
 
+## Project Overview
 In this project, we use the "Bank Marketing Dataset" to train a ML model using Azure's AutoML service (which is a part of Azure Machine Learning Studio). This model is deployed and published using Azure Container Instances (ACI) later consume it using REST endpoints. We will also create, publish and consume a pipeline.
 
 
 ## Architecture Diagram of the Workflow
 ![image](https://user-images.githubusercontent.com/81923226/114523564-06d0b000-9c62-11eb-9977-e5fef2391b98.png)
 
-### Steps:
+## How can we improve the project further?
+
+1. Using Deep Learning in AutoML to accelerate the model training process and improve the accuracy, however this is subjective and may only work on larger datasets with lowly-sparsed features present.
+2. Apply model interpretability of AutoML on more complex and larger datasets, to gain speed and valuable insights in feature engineering, which can in turn be used to refine complex model accuracy.
+3. Apply the same concept learned here to create and publish other types of pipelines for:
+     - Data Preparation
+     - Validation
+     - Deployment
+     - Combined tasks
+
+## Key Steps:
 1. Bank Marketing Dataset is registered on Azure MLS
 2. Specify the dataset and configuration details such as machine learning task, here in our case its a classification task, exit criteria, etc. for selecting the best model that AutoML will produce.
 3. Based on the metric selected in AutoML, select the best model and deploy it using azure container instance(ACI)
@@ -19,10 +30,15 @@ In this project, we use the "Bank Marketing Dataset" to train a ML model using A
 6. Using python SDK create a pipeline selecting the best AutoML model and publish it.
 
 
+## SCREENCAST YOUTUBE VIDEO LINK 
+https://www.youtube.com/watch?v=_D0UccIcd6c
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_D0UccIcd6c/0.jpg)](https://www.youtube.com/watch?v=_D0UccIcd6c)
+
 ## Complete Workflow Step-by-Step Explaination & Screenshots
 
 
-Bank Marketing dataset is uploaded on Azure MLS and is consequently registered.
+### Bank Marketing dataset is uploaded on Azure MLS and is consequently registered.
 ![image](https://user-images.githubusercontent.com/81923226/114527550-bf4c2300-9c65-11eb-880d-73dfeb1fb630.png)
 
 Compute Cluster creation process initiated
@@ -42,6 +58,7 @@ Cluster is named with minimum number of nodes set as = 1
 Post successful creation of compute cluster, we head over to experiment and start an AutoML run
 ![image](https://user-images.githubusercontent.com/81923226/114528196-6af57300-9c66-11eb-950f-0a6fdaa000c0.png)
 
+### Initializing AutoML Run
 
 Bank Marketing dataset is chosen for the desired AutoML run
 ![image](https://user-images.githubusercontent.com/81923226/114528245-75b00800-9c66-11eb-9dbf-a2c6ab202453.png)
@@ -86,6 +103,7 @@ RESULT GRAPHS OF AUTOML RUN DISPLAYED BELOW:
 ![image](https://user-images.githubusercontent.com/81923226/114537791-3c7c9580-9c70-11eb-900d-8da03f10d504.png)
 ![image](https://user-images.githubusercontent.com/81923226/114537812-443c3a00-9c70-11eb-95d1-cc304c0fb9e2.png)
 
+### Deploying Model Obtained via AutoML
 
 Now, we proceed for Model Deployment. We click on "Deploy" button to initiate deployment of the best run. We name the deployment too.
 
@@ -96,7 +114,7 @@ Deployment is now in 'Transitioning' State.
 
 ![image](https://user-images.githubusercontent.com/81923226/114537919-6a61da00-9c70-11eb-9269-9c27302fd9bb.png)
 
-
+### Model successfully deployed on Azure MLS
 Successfully Deployed! Deployment State changed to 'Healthy'
 
 ![image](https://user-images.githubusercontent.com/81923226/114537976-777ec900-9c70-11eb-93ab-54c595410307.png)
@@ -106,7 +124,7 @@ REST Endpoint of deployment displayed. We need to enable logging. Application In
 
 ![image](https://user-images.githubusercontent.com/81923226/114538008-81a0c780-9c70-11eb-97fe-b9e0f9042c8b.png)
 
-
+### Application Insights set to 'True'
 We now use GitBash and run the `logs.py` script to initiate the model logging process and this changes the Application Insights field to 'true'.
 
 ![image](https://user-images.githubusercontent.com/81923226/114538105-9b420f00-9c70-11eb-8357-8f451925760b.png)
@@ -263,11 +281,6 @@ PUBLISHED PIPELINE OVERVIEW
 ![image](https://user-images.githubusercontent.com/81923226/114540192-dd6c5000-9c72-11eb-81f6-72f3ac634a0f.png)
 
 ![image](https://user-images.githubusercontent.com/81923226/114540210-e2310400-9c72-11eb-83d5-bdaac527b33a.png)
-
-## SCREENCAST YOUTUBE VIDEO LINK 
-https://www.youtube.com/watch?v=_D0UccIcd6c
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_D0UccIcd6c/0.jpg)](https://www.youtube.com/watch?v=_D0UccIcd6c)
 
 ## Potential Improvements
 
